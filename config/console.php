@@ -23,13 +23,30 @@ $config = [
         'db' => $db,
     ],
     'params' => $params,
-    /*
     'controllerMap' => [
-        'fixture' => [ // Fixture generation command line.
-            'class' => 'yii\faker\FixtureController',
+        'migrate' => [
+            'class' => 'yii\console\controllers\MigrateController',
+            //自动应答
+            'interactive' => 0,
+            //命名空间
+            'migrationNamespaces' => [
+                'app\migrations',
+                'yuncms\system\migrations',
+                'yuncms\tag\migrations',
+                'yuncms\user\migrations',
+                'yuncms\question\migrations',
+                'yuncms\comment\migrations',
+                'yuncms\attachment\migrations',
+                'yuncms\oauth2\migrations',
+                //'yuncms\message\migrations',
+            ],
+            // 完全禁用非命名空间迁移
+            //'migrationPath' => null,
         ],
+//        'fixture' => [ // Fixture generation command line.
+//            'class' => 'yii\faker\FixtureController',
+//        ],
     ],
-    */
 ];
 
 if (YII_ENV_DEV) {

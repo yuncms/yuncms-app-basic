@@ -14,14 +14,10 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '',
+            'cookieValidationKey' => 'asdfasdf',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
-        ],
-        'user' => [
-            'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -51,6 +47,26 @@ $config = [
             ],
         ],
         */
+        'authClientCollection' => [
+            'class' => 'yii\authclient\Collection'
+        ],
+    ],
+    'modules' => [
+        'system' => [
+            'class' => 'yuncms\system\frontend\Module'
+        ],
+        'user' => [
+            'class' => 'yuncms\user\frontend\Module'
+        ],
+        'attachment' => [
+            'class' => 'yuncms\attachment\frontend\Module',
+        ],
+        'comment' => [
+            'class' => 'yuncms\comment\frontend\Module',
+        ],
+        'question' => [
+            'class' => 'yuncms\question\frontend\Module',
+        ],
     ],
     'params' => $params,
 ];
