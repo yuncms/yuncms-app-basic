@@ -8,6 +8,7 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'aliases' => [
+        '@root'   => '@app',
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
@@ -49,6 +50,34 @@ $config = [
         */
         'authClientCollection' => [
             'class' => 'yii\authclient\Collection'
+        ],
+        'i18n' => [//多语言配置
+            'translations' => [
+                '*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@common/messages',
+                ],
+
+                'user' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@yuncms/user/messages',
+                ],
+
+
+                'attachment' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@yuncms/attachment/messages',
+                ],
+                'tag' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@yuncms/tag/messages',
+                ],
+
+                'oauth2' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@yuncms/oauth2/messages',
+                ],
+            ]
         ],
     ],
     'modules' => [
