@@ -8,6 +8,7 @@ The template contains the basic features including user login/logout and a conta
 It includes all commonly used configurations that would allow you to focus on adding new
 features to your application.
 
+QQ Group [![YUNCMS 开发交流](https://pub.idqqimg.com/wpa/images/group.png)](https://shang.qq.com/wpa/qunwpa?idkey=71c6d683e9aba941b3684195c7f874007fe83c615a6e89a2470866d035ca0a20)
 [![Latest Stable Version](https://poser.pugx.org/yuncms/yuncms-app-basic/v/stable.png)](https://packagist.org/packages/yuncms/yuncms-app-basic)
 [![Total Downloads](https://poser.pugx.org/yuncms/yuncms-app-basic/downloads.png)](https://packagist.org/packages/yuncms/yuncms-app-basic)
 [![Build Status](https://travis-ci.org/yuncms/yuncms-app-basic.svg?branch=master)](https://travis-ci.org/yuncms/yuncms-app-basic)
