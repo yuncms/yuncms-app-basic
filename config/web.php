@@ -3,19 +3,24 @@
 $params = require(__DIR__ . '/params.php');
 $db = require(__DIR__ . '/db.php');
 
+$modules = array_merge(
+    require(__DIR__ . '/../../vendor/yuncms/modules.php'),
+    require(__DIR__ . '/modules.php')
+);
+
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'aliases' => [
-        '@root'   => '@app',
+        '@root' => '@app',
         '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@npm' => '@vendor/npm-asset',
     ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'asdfasdf',
+            'cookieValidationKey' => '',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -52,51 +57,10 @@ $config = [
             'class' => 'yii\authclient\Collection'
         ],
         'i18n' => [//多语言配置
-            'translations' => [
-                '*' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@common/messages',
-                ],
-
-                'user' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@yuncms/user/messages',
-                ],
-
-
-                'attachment' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@yuncms/attachment/messages',
-                ],
-                'tag' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@yuncms/tag/messages',
-                ],
-
-                'oauth2' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@yuncms/oauth2/messages',
-                ],
-            ]
+            'translations' => require(__DIR__ . '/translations.php'),
         ],
     ],
-    'modules' => [
-        'system' => [
-            'class' => 'yuncms\system\frontend\Module'
-        ],
-        'user' => [
-            'class' => 'yuncms\user\frontend\Module'
-        ],
-        'attachment' => [
-            'class' => 'yuncms\attachment\frontend\Module',
-        ],
-        'comment' => [
-            'class' => 'yuncms\comment\frontend\Module',
-        ],
-        'question' => [
-            'class' => 'yuncms\question\frontend\Module',
-        ],
-    ],
+    'modules' => $modules,
     'params' => $params,
 ];
 

@@ -2,7 +2,13 @@
 
 $params = require(__DIR__ . '/params.php');
 $db = require(__DIR__ . '/db.php');
-
+//合并迁移命名空间
+$migrationNamespaces = array_merge(
+    require(__DIR__ . '/../../vendor/yuncms/migrations.php'),
+    [
+        'app\migrations',
+    ]
+);
 $config = [
     'id' => 'basic-console',
     'basePath' => dirname(__DIR__),
@@ -26,22 +32,9 @@ $config = [
     'controllerMap' => [
         'migrate' => [
             'class' => 'yii\console\controllers\MigrateController',
-            //自动应答
-            'interactive' => 0,
-            //命名空间
-            'migrationNamespaces' => [
-                'app\migrations',
-                'yuncms\system\migrations',
-                'yuncms\tag\migrations',
-                'yuncms\user\migrations',
-                'yuncms\question\migrations',
-                'yuncms\comment\migrations',
-                'yuncms\attachment\migrations',
-                'yuncms\oauth2\migrations',
-                //'yuncms\message\migrations',
-            ],
-            // 完全禁用非命名空间迁移
-            //'migrationPath' => null,
+            'interactive' => 0,//自动应答
+            'migrationPath' => null,// 完全禁用非命名空间迁移
+            'migrationNamespaces' => $migrationNamespaces,//命名空间
         ],
 //        'fixture' => [ // Fixture generation command line.
 //            'class' => 'yii\faker\FixtureController',
