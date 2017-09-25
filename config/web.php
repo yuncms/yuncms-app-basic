@@ -56,9 +56,7 @@ $config = [
         'authClientCollection' => [
             'class' => 'yii\authclient\Collection'
         ],
-        'i18n' => [//多语言配置
-            'translations' => require(__DIR__ . '/translations.php'),
-        ],
+        'i18n' => require(__DIR__ . '/i18n.php'),
     ],
     'modules' => $modules,
     'params' => $params,
