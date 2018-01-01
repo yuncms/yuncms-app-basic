@@ -4,7 +4,7 @@ $params = require(__DIR__ . '/params.php');
 $db = require(__DIR__ . '/db.php');
 //合并迁移命名空间
 $migrationNamespaces = array_merge(
-    require(__DIR__ . '/../../vendor/yuncms/migrations.php'),
+    require(__DIR__ . '/../vendor/yuncms/migrations.php'),
     [
         'app\migrations',
     ]

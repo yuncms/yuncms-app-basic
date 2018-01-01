@@ -4,7 +4,7 @@ $params = require(__DIR__ . '/params.php');
 $db = require(__DIR__ . '/db.php');
 
 $modules = array_merge(
-    require(__DIR__ . '/../../vendor/yuncms/modules.php'),
+    require(__DIR__ . '/../vendor/yuncms/frontend.php'),
     require(__DIR__ . '/modules.php')
 );
 
