@@ -29,15 +29,9 @@ phpunit.phar
 
 tests/_output/*
 tests/_support/_generated
+
 # vagrant runtime
 /.vagrant
 
 # apidoc generated documentation
 docs-html
-
-/uploads
-/nginx.conf
-/web/uploads
-
-.version
-docker-compose.override.yml

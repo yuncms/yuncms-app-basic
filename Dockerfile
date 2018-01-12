@@ -1,6 +1,8 @@
 FROM yuncms/php:7.1-nginx
 
-MAINTAINER XUTL <xutl@gmail.com>
+LABEL maintainer="xutongle@gmail.com"
+
+ADD nginx.conf /usr/local/etc/nginx/sites/default.conf
 
 # Environment settings
 ENV YUNCMS_DB_NAME yuncms
@@ -12,7 +14,5 @@ COPY . /app/
 
 WORKDIR /app
 
-RUN rm -f /usr/local/etc/nginx/sites/default.conf \
-	&& ln -s /app/nginx.conf /usr/local/etc/nginx/sites/nginx.conf \
-	&& chown -R www-data:www-data /app
+RUN chown -R www-data:www-data /app
 
