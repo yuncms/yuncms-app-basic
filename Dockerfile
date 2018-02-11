@@ -2,8 +2,6 @@ FROM yuncms/php:7.1-nginx
 
 LABEL maintainer="xutongle@gmail.com"
 
-ADD nginx.conf /usr/local/etc/nginx/sites/default.conf
-
 # Environment settings
 ENV YUNCMS_DB_NAME yuncms
 ENV YUNCMS_DB_USER yuncms
@@ -14,5 +12,9 @@ COPY . /app/
 
 WORKDIR /app
 
-RUN chown -R www-data:www-data /app
+RUN set -xe \
+	&& chown -R www-data:www-data /app \
+	&& rm -rf /usr/local/html \
+	&& ln -s /app/web /usr/local/html
+
 
