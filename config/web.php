@@ -3,19 +3,12 @@
 $params = require(__DIR__ . '/params.php');
 $db = require(__DIR__ . '/db.php');
 
-$modules = array_merge(
-    require(__DIR__ . '/../vendor/yuncms/frontend.php'),
-    require(__DIR__ . '/modules.php')
-);
-
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'aliases' => [
         '@root' => '@app',
-        '@bower' => '@vendor/bower-asset',
-        '@npm' => '@vendor/npm-asset',
     ],
     'components' => [
         'request' => [
@@ -58,7 +51,7 @@ $config = [
         ],
         'i18n' => require(__DIR__ . '/i18n.php'),
     ],
-    'modules' => $modules,
+
     'params' => $params,
 ];
 

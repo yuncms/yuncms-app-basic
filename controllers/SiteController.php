@@ -2,9 +2,9 @@
 
 namespace app\controllers;
 
-use Yii;
-use yii\web\Controller;
-use yii\web\Response;
+use Yun;
+use yuncms\web\Response;
+use yuncms\web\Controller;
 use app\models\ContactForm;
 
 class SiteController extends Controller
@@ -43,8 +43,8 @@ class SiteController extends Controller
     public function actionContact()
     {
         $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
+        if ($model->load(Yun::$app->request->post()) && $model->contact(Yun::$app->params['adminEmail'])) {
+            Yun::$app->session->setFlash('contactFormSubmitted');
 
             return $this->refresh();
         }

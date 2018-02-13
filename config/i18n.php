@@ -6,18 +6,15 @@
  */
 //合并语言包配置
 return [
-    'translations' => array_merge(
-        require(__DIR__ . '/../vendor/yuncms/translates.php'),
-        [
-            'app*' => [
-                'class' => 'yii\i18n\PhpMessageSource',
-                //'basePath' => '@app/messages',
-                'sourceLanguage' => 'en-US',
-                'fileMap' => [
-                    'app' => 'app.php',
-                    'app/error' => 'error.php',
-                ],
+    'translations' => [
+        'app*' => [
+            'class' => 'yii\i18n\PhpMessageSource',
+            //'basePath' => '@app/messages',
+            'sourceLanguage' => 'en-US',
+            'fileMap' => [
+                'app' => 'app.php',
+                'app/error' => 'error.php',
             ],
-        ]
-    ),
+        ],
+    ],
 ];
