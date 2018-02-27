@@ -18,10 +18,17 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.0.0",
-        "yuncms/cms": "~3.0.0"
+        "yuncms/framework": "1.0.x-dev",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "vlucas/phpdotenv": "^2.4.0"
     },
     "config": {
         "process-timeout": 1800
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
     },
     "repositories": [
         {

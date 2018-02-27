@@ -3,10 +3,10 @@ FROM yuncms/php:7.1-nginx
 LABEL maintainer="xutongle@gmail.com"
 
 ENV APP_ENV=Staging \
-	YUN_DB_HOST=127.0.0.1 \
-	YUN_DB_NAME=yuncms_stage \
-	YUN_DB_USERNAME=yuncms \
-	YUN_DB_PASSWORD=123456
+	DB_HOST=127.0.0.1 \
+	DB_NAME=yuncms_stage \
+	DB_USERNAME=yuncms \
+	DB_PASSWORD=123456
 
 COPY . /app/
 

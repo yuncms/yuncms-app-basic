@@ -2,9 +2,9 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=' . getenv('YUNCMS_DB_HOST') . ';dbname=' . getenv('YUNCMS_DB_NAME'),
-    'username' => getenv('YUNCMS_DB_USER'),
-    'password' => getenv('YUNCMS_DB_PASSWORD'),
+    'dsn' => 'mysql:host=localhost;dbname=yuncms_dev',
+    'username' => 'root',
+    'password' => '123456',
     'charset' => 'utf8',
 
     // Schema cache options (for production environment)

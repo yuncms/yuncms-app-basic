@@ -13,7 +13,7 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '',
+            'cookieValidationKey' => 'aaaaaaaaaaaaaaaaaaaaaaaaa',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -46,9 +46,6 @@ $config = [
             ],
         ],
         */
-        'authClientCollection' => [
-            'class' => 'yii\authclient\Collection'
-        ],
         'i18n' => require(__DIR__ . '/i18n.php'),
     ],
 

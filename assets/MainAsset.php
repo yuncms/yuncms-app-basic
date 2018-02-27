@@ -44,8 +44,8 @@ class MainAsset extends AssetBundle
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
         'yii\bootstrap\BootstrapPluginAsset',
-        'xutl\fontawesome\Asset',
-        'yuncms\user\frontend\assets\UserAsset',
+        //'xutl\fontawesome\Asset',
+        //'yuncms\user\frontend\assets\UserAsset',
         //'yuncms\message\frontend\assets\Asset',
     ];
 
