@@ -1,43 +1,46 @@
 {
-    "name": "yuncms/yuncms-app-basic",
-    "description": "YUNCMS Basic Project Template",
-    "keywords": [
-        "yuncms",
-        "yii2",
-        "framework",
-        "basic",
-        "project template"
-    ],
-    "homepage": "http://www.yuncms.net/",
-    "type": "project",
-    "license": "MIT",
-    "support": {
-        "issues": "https://github.com/yuncms/yuncms-app-basic/issues?state=open",
-        "source": "https://github.com/yuncms/yuncms-app-basic"
-    },
-    "minimum-stability": "dev",
-    "require": {
-        "php": ">=7.0.0",
-        "yuncms/framework": "1.0.x-dev",
-        "yiisoft/yii2-bootstrap": "~2.0.0",
-        "vlucas/phpdotenv": "^2.4.0"
-    },
-    "config": {
-        "process-timeout": 1800
-    },
-    "scripts": {
-        "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ]
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        },
-        {
-            "type": "composer",
-            "url": "https://packagist.phpcomposer.com"
-        }
+  "name": "yuncms/yuncms-app-basic",
+  "description": "YUNCMS Basic Project Template",
+  "keywords": [
+    "yuncms",
+    "yii2",
+    "framework",
+    "basic",
+    "project template"
+  ],
+  "homepage": "http://www.yuncms.net/",
+  "type": "project",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/yuncms/yuncms-app-basic/issues?state=open",
+    "source": "https://github.com/yuncms/yuncms-app-basic"
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.1.0",
+    "yuncms/framework": "1.0.x-dev",
+    "yiisoft/yii2-bootstrap": "~2.0.0",
+    "vlucas/phpdotenv": "^2.4.0"
+  },
+  "config": {
+    "process-timeout": 1800
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ]
+  },
+  "repositories": [
+    {
+      "packagist": false
+    },
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    },
+    {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  ]
 }
