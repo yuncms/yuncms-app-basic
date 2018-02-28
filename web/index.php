@@ -8,8 +8,8 @@ if (file_exists(dirname(__DIR__) .'/.env')) {
 }
 
 $config = yii\helpers\ArrayHelper::merge(
-    require(__DIR__ . '/../vendor/yuncms/framework/src/config/main.php'),
-    require(__DIR__ . '/../vendor/yuncms/framework/src/config/web.php'),
+    require(__DIR__ . '/../vendor/yuncms/framework/config/main.php'),
+    require(__DIR__ . '/../vendor/yuncms/framework/config/web.php'),
     require(__DIR__ . '/../config/web.php')
 );
 (new yuncms\web\Application($config))->run();

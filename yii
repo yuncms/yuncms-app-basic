@@ -20,8 +20,8 @@ if (file_exists(__DIR__ .'/.env')) {
 }
 
 $config = yii\helpers\ArrayHelper::merge(
-    require(__DIR__ . '/../../vendor/yuncms/framework/src/config/main.php'),
-    require(__DIR__ . '/../../vendor/yuncms/framework/src/config/console.php'),
+    require(__DIR__ . '/vendor/yuncms/framework/config/main.php'),
+    require(__DIR__ . '/vendor/yuncms/framework/config/console.php'),
     require(__DIR__ . '/config/console.php')
 );
 
