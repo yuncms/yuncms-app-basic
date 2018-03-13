@@ -22,7 +22,8 @@
     "yiisoft/yii2-bootstrap": "~2.0.0",
     "vlucas/phpdotenv": "^2.4.0",
     "yuncms/broadcast-aliyun": "~1.0",
-    "yuncms/broadcast-qcloud": "~1.0"
+    "yuncms/broadcast-qcloud": "~1.0",
+    "xutl/yii2-aliyun": "~2.0"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "~2.0.0",
@@ -41,7 +42,8 @@
     "overtrue/flysystem-qiniu": "~1.0",
     "jellybool/flysystem-upyun": "~1.0",
     "freyo/flysystem-qcloud-cos-v4": "~2.0",
-    "freyo/flysystem-qcloud-cos-v5": "~1.0"
+    "freyo/flysystem-qcloud-cos-v5": "~1.0",
+    "jpush/jpush": "~3.5.34"
   },
   "config": {
     "process-timeout": 1800
